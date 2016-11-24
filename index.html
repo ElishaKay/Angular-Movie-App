@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<!-- On click, push the input into an array. -->
+
+	
+	<div ng-app="appName">
+		<div ng-controller="exercisectrl1">
+			<input type="text" ng-model="userText">
+			<button ng-click="pushToArray()">Click</button>
+
+			<p ng-repeat="item in stuff">{{item | uppercase}}</p>
+		</div>
+
+	<ul ng-controller = "badNamesCtrl">
+	  <li ng-repeat="name in badNames">{{name}}</li>
+	</ul>
+
+
+<!-- The Final Closing Div for your Angular Practice -->
+
+	</div>
+
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="exercisectrl1.js"></script>
+	<script type="text/javascript" src="badNamesCtrl.js"></script>
+
+	
+</body>
+</html>

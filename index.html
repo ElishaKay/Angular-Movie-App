@@ -11,15 +11,61 @@
 <header>
 
 <div class="container">
-    <div class="intro-text">
-      <div class="intro-lead-in">Welcome to my site! What's your name?</div> <button>Submit</button>
-      <input type="text" id="my-input" placeholder="Some Text!"></input>
-      <div class="intro-heading">It's Nice To Meet You</div>
-      <button class="btn btn-success">Tell Me More</button>
-    </div>
+    <img src="img/seinfeldbanner.png"> 
+      <div class="intro-heading">Search for your Favorite Films</div>
   </div>
 
 </header>
+
+
+	
+	
+	<div ng-app="appName">
+
+<!-- Below: User Input Box. On click, the input is pushed into an array. -->
+	<div class="angular-input">
+		<div ng-controller="exercisectrl1" align="center"> 
+			<input type="text" ng-model="userText">
+			<button ng-click="pushToArray()">Click</button>
+
+			<p ng-repeat="item in stuff">{{item | uppercase}}</p>
+		</div>
+	</div>
+<!-- Printing the keys and values of an object within an array -->
+
+	<div class="container">
+	<div class="row text-center">
+	<div class="col-md-4 box">
+        
+			<div ng-controller = "PeopleCtrl">
+				<div ng-repeat="x in People | orderBy: 'name'">
+
+    				<div class="column">
+     				<div class="column-inner">
+
+					<p>{{x.name}}</p>
+					<p>{{x.description}}</p>
+		
+						<img src ="{{x.img}}">
+						
+					</div>
+					</div>
+			</div>
+		
+
+	</div>
+	</div>
+	</div>
+
+</div>
+
+
+<!-- The end of printing key-value pairs from an Angular factory :) -->
+
+
+<!-- Below: The Final Closing Div for your Angular Functions -->
+
+	</div>
 
 
 
@@ -67,35 +113,7 @@
 
 
 
-	<!-- On click, push the input into an array. -->
 
-	
-	<div ng-app="appName">
-
-<!-- Printing the keys and values of an object within an array -->
-
-		<ul ng-controller = "PeopleCtrl">
-			<li ng-repeat="x in People | orderBy: 'lname'">{{x.lname}}, {{x.name}}</li>
-		</ul>
-
-<!-- The end of printing key-value pairs from an Angular factory :) -->
-
-
-		<div ng-controller="exercisectrl1">
-			<input type="text" ng-model="userText">
-			<button ng-click="pushToArray()">Click</button>
-
-			<p ng-repeat="item in stuff">{{item | uppercase}}</p>
-		</div>
-
-	<ul ng-controller = "badNamesCtrl">
-	  <li ng-repeat="name in badNames">{{name}}</li>
-	</ul>
-
-
-<!-- The Final Closing Div for your Angular Practice -->
-
-	</div>
 
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>

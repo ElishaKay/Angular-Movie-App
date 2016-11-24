@@ -1,9 +1,11 @@
 var app = angular.module("appName", []);
 
 app.factory('badNamesService', function(){
-  var badNamesForKids = ["Keerolepa", "Elzenon", "Jultana", "Chintma", "Bss"];
+
+		app.factory('PeopleService', function(){
+  var People = [{name: 'Elisha', lname: 'Kramer', severity: 3}, {name: 'Sara', lname: 'Abrams', severity: 7}, {name: 'Jack', lname: 'Smallnuts', severity: 10}];
 
   return { 
-    badNames: badNamesForKids 
+    People: People 
   };
 });

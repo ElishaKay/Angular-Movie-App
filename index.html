@@ -1,14 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Angular Netflix</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
 </head>
 <body>
+
+<header>
+
+<div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">Welcome to my site! What's your name?</div> <button>Submit</button>
+      <input type="text" id="my-input" placeholder="Some Text!"></input>
+      <div class="intro-heading">It's Nice To Meet You</div>
+      <button class="btn btn-success">Tell Me More</button>
+    </div>
+  </div>
+
+</header>
+
+
+
+<i class="fa fa-address-book-o" aria-hidden="true"></i>
+
+<div class="container">
+	<div class="row text-center">
+		<div class="col-md-4 box">
+			<span class="fa-stack fa-4x">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+			</span>
+			<h4>E-Commerce</h4>
+			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+		</div>
+	
+
+<div class="container">
+	<div class="row text-center">
+		<div class="col-md-4 box">
+			<span class="fa-stack fa-4x">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+			</span>
+			<h4>E-Commerce</h4>
+			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+		</div>
+	
+
+
+<div class="container">
+	<div class="row text-center">
+		<div class="col-md-4 box">
+			<span class="fa-stack fa-4x">
+				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+			</span>
+			<h4>E-Commerce</h4>
+			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+		</div>
+
+<!-- Closing the 3 Divs spreading across the line		 -->
+	</div>
+</div>
+
+
 
 	<!-- On click, push the input into an array. -->
 
 	
 	<div ng-app="appName">
+
+<!-- Printing the keys and values of an object within an array -->
+
+		<ul ng-controller = "PeopleCtrl">
+			<li ng-repeat="x in People | orderBy: 'lname'">{{x.lname}}, {{x.name}}</li>
+		</ul>
+
+<!-- The end of printing key-value pairs from an Angular factory :) -->
+
+
 		<div ng-controller="exercisectrl1">
 			<input type="text" ng-model="userText">
 			<button ng-click="pushToArray()">Click</button>
@@ -29,6 +101,7 @@
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="exercisectrl1.js"></script>
 	<script type="text/javascript" src="badNamesCtrl.js"></script>
+	<script type="text/javascript" src="People.js"></script>
 
 	
 </body>

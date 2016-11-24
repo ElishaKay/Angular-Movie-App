@@ -5,6 +5,9 @@
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+	<head>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
 </head>
 <body>
 
@@ -33,9 +36,7 @@
 	</div>
 <!-- Printing the keys and values of an object within an array -->
 
-	<div class="container">
-	<div class="row text-center">
-	<div class="col-md-4 box">
+
         
 			<div ng-controller = "PeopleCtrl">
 				<div ng-repeat="x in People | orderBy: 'name'">
@@ -43,11 +44,15 @@
     				<div class="column">
      				<div class="column-inner">
 
-					<p>{{x.name}}</p>
-					<p>{{x.description}}</p>
+					<p class="thefilm" align="center"><strong>{{x.name}}</strong>
+						<span ng-click="pushToArray()" class="animated bounce favorite"><i class="fa fa-heart" aria-hidden="true"></i></span>
+					</p>
+					<p align="center">{{x.description}}</p>
 		
 						<img src ="{{x.img}}">
-						
+
+			<!-- Making the heart bounce on click -->
+
 					</div>
 					</div>
 			</div>
@@ -68,59 +73,15 @@
 	</div>
 
 
-
-<i class="fa fa-address-book-o" aria-hidden="true"></i>
-
-<div class="container">
-	<div class="row text-center">
-		<div class="col-md-4 box">
-			<span class="fa-stack fa-4x">
-				<i class="fa fa-circle fa-stack-2x"></i>
-				<i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-			</span>
-			<h4>E-Commerce</h4>
-			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-		</div>
-	
-
-<div class="container">
-	<div class="row text-center">
-		<div class="col-md-4 box">
-			<span class="fa-stack fa-4x">
-				<i class="fa fa-circle fa-stack-2x"></i>
-				<i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-			</span>
-			<h4>E-Commerce</h4>
-			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-		</div>
-	
-
-
-<div class="container">
-	<div class="row text-center">
-		<div class="col-md-4 box">
-			<span class="fa-stack fa-4x">
-				<i class="fa fa-circle fa-stack-2x"></i>
-				<i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-			</span>
-			<h4>E-Commerce</h4>
-			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-		</div>
-
-<!-- Closing the 3 Divs spreading across the line		 -->
-	</div>
-</div>
-
-
-
-
-
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="exercisectrl1.js"></script>
 	<script type="text/javascript" src="badNamesCtrl.js"></script>
 	<script type="text/javascript" src="People.js"></script>
+	<script type="text/javascript" src="animate-controller.js"></script>
 
-	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.js"></script>
 </body>
 </html>

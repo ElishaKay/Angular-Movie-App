@@ -1,0 +1,27 @@
+{
+  "name": "angular-movie-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Extra Notes.js",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "bootstrap": "^4.0.0",
+    "express": "^4.16.2",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElishaKay/Angular-Movie-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElishaKay/Angular-Movie-App/issues"
+  },
+  "homepage": "https://github.com/ElishaKay/Angular-Movie-App#readme"
+}

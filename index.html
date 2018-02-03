@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 <head>
 	<title>Angular Netflix</title>
@@ -6,10 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
 	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.js"></script>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="movies.js"></script>
+
 </head>
 </head>
-<body>
+<body ng-app="appName">
 
 <header>
 
@@ -23,11 +29,11 @@
 
 	
 	
-	<div ng-app="appName">
+	<div ng-controller="MoviesCtrl">
 
 <!-- Below: User Input Box. On click, the input is pushed into an array. -->
 	<div class="angular-input">
-		<div ng-controller="exercisectrl1" align="center"> 
+		<div align="center"> 
 			<input type="text" ng-model="userText">
 			<button ng-click="pushToArray()">Click</button>
 
@@ -37,9 +43,7 @@
 <!-- Printing the keys and values of an object within an array -->
 
 
-        
-			<div ng-controller = "PeopleCtrl">
-				<div ng-repeat="x in People | orderBy: 'name'">
+				<div ng-repeat="x in Movies | orderBy: 'name'">
 
     				<div class="column">
      				<div class="column-inner">
@@ -54,34 +58,15 @@
 			<!-- Making the heart bounce on click -->
 
 					</div>
-					</div>
 			</div>
 		
 
 	</div>
 	</div>
-	</div>
-
-</div>
 
 
-<!-- The end of printing key-value pairs from an Angular factory :) -->
 
 
-<!-- Below: The Final Closing Div for your Angular Functions -->
 
-	</div>
-
-
-	<script src="node_modules/angular/angular.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
-	<script type="text/javascript" src="exercisectrl1.js"></script>
-	<script type="text/javascript" src="badNamesCtrl.js"></script>
-	<script type="text/javascript" src="People.js"></script>
-	<script type="text/javascript" src="animate-controller.js"></script>
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.js"></script>
 </body>
 </html>
